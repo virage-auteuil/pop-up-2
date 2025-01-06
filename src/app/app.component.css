@@ -1,0 +1,92 @@
+/* Fond général avec un dégradé */
+.popup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #1e3c72, #2a5298);
+    overflow: hidden;
+    perspective: 1000px;
+  }
+  
+  /* Style du pop-up */
+  .popup {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: rotateY(0deg) rotateX(0deg);
+    animation: float 5s infinite ease-in-out;
+  }
+  
+  /* Animation de flottement */
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  /* En-tête du pop-up */
+  .popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .popup-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333333;
+  }
+  
+  /* Bouton de fermeture */
+  .close-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #ff5a5f;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .close-btn:hover {
+    transform: rotate(90deg);
+  }
+  
+  /* Contenu du pop-up */
+  .popup-content {
+    text-align: center;
+  }
+  
+  .popup-content p {
+    font-size: 1rem;
+    color: #555555;
+    margin-bottom: 20px;
+  }
+  
+  /* Bouton principal */
+  .action-btn {
+    background: linear-gradient(120deg, #ff7e5f, #feb47b);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .action-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(255, 126, 95, 0.5);
+  }
+  
